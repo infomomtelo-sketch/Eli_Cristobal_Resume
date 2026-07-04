@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume — Eli Cristobal</title>
+<meta name="description" content="Resume of Eli Cristobal — solo founder shipping AI-powered SaaS products end to end.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b1526; --foam:#eef4f2; --mist:#9fb2c4;
+    --live:#3fd6b0; --amber:#f0a35e; --line:rgba(159,178,196,.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    background:var(--ink);color:var(--foam);
+    font-family:'Manrope',system-ui,sans-serif;line-height:1.6;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:40px 22px 60px}
+  .topbar{
+    display:flex;justify-content:space-between;align-items:center;
+    margin-bottom:36px;gap:12px;flex-wrap:wrap;
+  }
+  .back{
+    font-family:'IBM Plex Mono',monospace;font-size:.78rem;
+    color:var(--mist);text-decoration:none;
+  }
+  .back:hover{color:var(--live)}
+  .print-btn{
+    font-family:'Sora',sans-serif;font-weight:600;font-size:.85rem;
+    background:var(--live);color:var(--ink);border:none;cursor:pointer;
+    padding:10px 18px;border-radius:10px;
+  }
+  h1{font-family:'Sora',sans-serif;font-weight:800;font-size:2rem;letter-spacing:-.01em}
+  .role{color:var(--live);font-size:1rem;margin-bottom:4px}
+  .meta{font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--mist);margin-bottom:26px}
+  .summary{color:var(--mist);margin-bottom:8px}
+  .summary strong{color:var(--foam)}
+  h2{
+    font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--mist);font-weight:500;
+    display:flex;align-items:center;gap:12px;
+    margin:30px 0 14px;
+  }
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .job-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+  .job-head h3{font-family:'Sora',sans-serif;font-size:1.05rem;font-weight:700}
+  .job-head span{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--mist);align-self:center}
+  ul{list-style:none}
+  li{
+    position:relative;padding-left:18px;margin-bottom:9px;
+    color:var(--mist);font-size:.93rem;
+  }
+  li::before{content:"•";position:absolute;left:2px;color:var(--live)}
+  li strong{color:var(--foam);font-weight:600}
+  .creds li::before{content:"✓";color:var(--amber);font-size:.85rem}
+
+  /* ---- print: clean light one-pager ---- */
+  @media print{
+    :root{--ink:#fff;--foam:#111;--mist:#444;--live:#0a7a5f;--amber:#8a4b12;--line:#ccc}
+    body{background:#fff;color:#111}
+    .wrap{padding:0;max-width:none}
+    .topbar{display:none}
+    a{color:#111;text-decoration:none}
+    li{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <a class="back" href="index.html">← elicristobal.com</a>
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <h1>ELI CRISTOBAL</h1>
+  <p class="role">Full-Stack Product Engineer · LLM-Native Builder · Idea → Production, Solo</p>
+  <p class="meta">Fresno, CA · infomomtelo@gmail.com · runp8.com</p>
+
+  <p class="summary">Founder who has shipped <strong>six LLM-native SaaS products to production solo</strong> — no PM, no designer, no architect. Claude API in production every day: prompt design, model fallback strategies, usage metering, vision workflows, and cost controls. I talk directly to my users, iterate in days, and own everything from schema design to Stripe webhooks to marketing.</p>
+
+  <h2>Experience</h2>
+  <div class="job-head">
+    <h3>Founder &amp; Sole Engineer — RunP8 LLC</h3>
+    <span>Fresno, CA · [Year] – Present</span>
+  </div>
+  <ul>
+    <li><strong>Shipped 6 production LLM-native products 0→1, solo:</strong> Title22 (AI compliance for residential care facilities), RentyApp (property management with Claude vision inspections), OwnSite (AI website builder), TheJudgy (AI dispute mediation incl. live two-party sessions), iGuide (AI build guides), PostPilots (AI social content).</li>
+    <li><strong>AI-native workflows in production:</strong> prompt engineering across products, Haiku→Sonnet model fallback for cost/quality tradeoffs, vision API for real-world document and photo analysis, structured JSON outputs, per-plan usage metering with fail-closed credit deduction.</li>
+    <li><strong>Platform architecture, decided independently:</strong> unified auth + cross-app AI credit system on Supabase (Postgres, RLS, Realtime); dual-project data isolation; hardened Stripe webhooks with price-ID filtering after diagnosing and fixing a cross-app contamination bug.</li>
+    <li><strong>Direct user engagement:</strong> built Title22 hand-in-hand with a working RCFE administrator; RentyApp shaped by my own property management operations; rapid iteration from direct user feedback.</li>
+    <li><strong>Ship velocity:</strong> prototype to production in days on Cloudflare Workers/Pages; full billing loops (checkout, webhooks, customer portal) implemented and hardened per product; mobile-first PWA delivery.</li>
+    <li><strong>Full ownership:</strong> product decisions, scope cuts, architecture, security fixes, growth (organic TikTok + SEO) — the complete loop of building and operating software people rely on.</li>
+  </ul>
+
+  <div class="job-head" style="margin-top:20px">
+    <h3>Licensed Property Manager &amp; RCFE/CBRC Administrator</h3>
+    <span>Fresno, CA</span>
+  </div>
+  <ul>
+    <li>Hands-on operational experience in regulated, people-centric industries — the perspective behind building compliance and workflow tools that practitioners actually use.</li>
+  </ul>
+
+  <h2>Technical Skills</h2>
+  <ul>
+    <li><strong>AI/LLM:</strong> Anthropic Claude API (Messages, vision, streaming), prompt engineering, model selection &amp; fallback, usage/credit systems, structured outputs</li>
+    <li><strong>Stack:</strong> JavaScript, React/Vite, Node.js, SQL; Cloudflare Workers &amp; Pages; Supabase (Auth, Postgres, RLS, Realtime); Stripe; GitHub; OAuth; Resend</li>
+    <li><strong>Product:</strong> 0→1 scoping, mobile-first design, PWA, SEO, content-led growth</li>
+  </ul>
+
+  <h2>Licenses &amp; Certifications</h2>
+  <ul class="creds">
+    <li>RCFE / CBRC Administrator (California)</li>
+    <li>Licensed Property Manager</li>
+    <li>Certified Home Inspector</li>
+  </ul>
+
+  <h2>Live Portfolio</h2>
+  <ul>
+    <li>title22.app · rentyapp.net · thejudgy.com · runp8.com — all live, all revenue-instrumented, all built solo.</li>
+  </ul>
+
+</div>
+</body>
+</html>
